@@ -6,8 +6,8 @@ export default function CardItem(props) {
         <div className='card-item' key={item.id}>
             <div className='cover-image'>
                 <img src={item.coverImage} alt={item.userName} />
-                <i className="arrow left position-left"></i>
-                <i className="arrow right position-right"></i>
+                <i className="arrow left white position-left"></i>
+                <i className="arrow right white position-right"></i>
             </div>
             <div className='user-image-wrapper'>
                 <span className='true-sign'>✓</span>

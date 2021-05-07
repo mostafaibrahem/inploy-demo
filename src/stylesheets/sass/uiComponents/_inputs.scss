@@ -1,16 +1,51 @@
-.custom-input{
-        height: 52px;
-        border: 1px solid #D3D3D3;
-        border-radius: 10px;
-        text-indent: 10px;
-        width: 100%;
-        box-sizing: border-box;
-        
-    }    
-.custom-select{
+.custom-input {
+    height: 52px;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    text-indent: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.custom-select {
     height: 68px;
-    /* background-image:
-    linear-gradient(45deg, transparent 50%, blue 50%),
-    linear-gradient(135deg, blue 50%, transparent 50%),
-    linear-gradient(to right, skyblue, skyblue); */
+    background-image: url("../../resources/images/select-bg.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type="radio"] {
+    display: none;
+    /*removes original button*/
+}
+
+label:before {
+    /*styles outer circle*/
+    content: " ";
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin: 0 5px 0 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 11px;
+    border: 2px solid #d3d3d3;
+    background-color: transparent;
+}
+
+label {
+    position: relative;
+}
+
+label input[type="radio"]:checked + span {
+    /*styles inside circle*/
+    border-radius: 11px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    display: block;
+    background-color: $primary-color;
 }

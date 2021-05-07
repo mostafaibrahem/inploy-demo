@@ -6,7 +6,7 @@ export default function RegisterForm() {
         { id: 2, placeHolder: 'Job Title', name: 'Job Title', type: 'text' },
         { id: 3, placeHolder: 'Email', name: 'email', type: 'text' },
         { id: 4, placeHolder: 'Number', name: 'number', type: 'number' },
-        { id: 5, placeHolder: 'Category', name: 'category', type: 'select', items: [{ id: 11, categoryName: 'cat1' }, { id: 12, categoryName: 'cat2' }] },
+        { id: 5, placeHolder: 'Category', name: 'category', type: 'select', items: [{ id: 11, categoryName: 'First Category' }, { id: 12, categoryName: 'Second Category' }] },
     ]
     const customInput = (item) => (
         <div className='input-wrapper' key={item.id}>
@@ -25,7 +25,9 @@ export default function RegisterForm() {
                 {item.items.map((catItem) => (
                     <option key={catItem.id}>{catItem.categoryName}</option>
                 ))}
+                
             </select>
+            <div></div>
         </div>
     )
     return (

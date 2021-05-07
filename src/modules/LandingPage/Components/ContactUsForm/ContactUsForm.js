@@ -10,21 +10,25 @@ export default function ContactUsForm() {
             <p>For further assistance with projects or pre registration </p>
             <h4>How would like us to contact you?</h4>
             <form>
-                <input
-                    type="radio"
-                    id="Call"
-                    name="contactus"
-                    value="Call"
-                    onChange={(e) => { setContactusValue(e.target.value) }} />
-                <label htmlFor="Call">Call</label><br />
-                <input
-                    type="radio"
-                    id="Email"
-                    name="contactus"
-                    defaultChecked
-                    value="Email"
-                    onChange={(e) => { setContactusValue(e.target.value) }} />
-                <label htmlFor="Email">Email</label><br />
+                <label htmlFor="Call">
+                    <input
+                        type="radio"
+                        id="Call"
+                        name="contactus"
+                        value="Call"
+                        onChange={(e) => { setContactusValue(e.target.value) }} />
+                    <span></span>
+                Call</label><br />
+                <label htmlFor="Email">
+                    <input
+                        type="radio"
+                        id="Email"
+                        name="contactus"
+                        defaultChecked
+                        value="Email"
+                        onChange={(e) => { setContactusValue(e.target.value) }} />
+                    <span></span>
+                Email</label><br />
                 <input className='custom-input' type='text' placeholder={contactusValue} /><br />
                 <button className='btn small-btn btn-fill-prrimary'>Send</button>
             </form>

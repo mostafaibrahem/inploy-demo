@@ -29,7 +29,7 @@
         flex-basis: 60%;
         @include mq("desktop") {
             flex-basis: 100%;
-            transform: scale(0.6);
+            //transform: scale(0.6);
         }
         @include mq("tablet") {
             transform: scale(0.9);
@@ -47,7 +47,7 @@
     position: relative;
     .macbook-img {
         width: 100%;
-        @include mq("tablet") {
+        @include mq("desktop") {
             display: none;
         }
     }
@@ -59,7 +59,7 @@
             max-width: 163px;
             width: 50%;
         }
-        @include mq("tablet") {
+        @include mq("desktop") {
             display: none;
         }
     }
@@ -71,8 +71,12 @@
         /* justify-content: space-between; */
         width: 100%;
         align-items: center;
-        @include mq("tablet") {
+        
+        @include mq("desktop") {
             position: unset;
+            justify-content: center
+        }
+        @include mq("tablet") {
             flex-direction: column;
         }
     }
@@ -80,6 +84,11 @@
         width: 209px;
         .card-item {
             transform: scale(0.7);
+            min-width: 230px;
+            @include mq('tablet-small'){
+                transform: unset;
+                min-width: unset;
+            }
         }
         @include mq("tablet") {
             width: 300px;

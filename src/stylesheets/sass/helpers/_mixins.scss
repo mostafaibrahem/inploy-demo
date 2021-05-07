@@ -1,0 +1,33 @@
+
+
+/************MEDIA QUERY ********************/
+$breakpoints: (
+  "tiny-phone": 361px,
+  "iphone": 380px,
+  "phone": 400px,
+  "phone-wide": 480px,
+  "phablet": 576px, 
+  "tablet-small": 641px,
+  "tablet": 768px, 
+  "ipad": 993px,
+  "tablet-wide": 1025px,
+  "tablet-qc": 1201px,
+  "desktop": 1301px,
+  "desktop-wide": 1440px, 
+  "desktop-wide-lg": 1700px
+);
+
+@mixin mq($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type==max {
+      $width: $width - 1px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+

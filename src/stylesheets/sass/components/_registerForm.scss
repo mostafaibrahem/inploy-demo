@@ -1,0 +1,23 @@
+.register-form-wrapper {
+    flex-basis: 50%;
+    @include mq('tablet-wide'){
+        flex-basis: 100%;
+    }
+    h1 {
+        color: $dark-blue;
+        span {
+            padding-bottom: 5px;
+        }
+    }
+    .register-form {
+        display: flex;
+        flex-wrap: wrap;
+        .input-wrapper {
+            flex-basis: 45%;
+            margin: 5px 10px;
+            @include mq('phone-wide'){
+                flex-basis: 90%;
+            }
+        }
+    }
+}

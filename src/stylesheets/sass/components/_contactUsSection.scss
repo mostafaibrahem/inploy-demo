@@ -1,0 +1,97 @@
+.contact-us-section {
+    display: flex;
+    padding: 20px 120px;
+    @include mq("desktop") {
+        padding: 20px;
+        flex-direction: column;
+    }
+    h3,
+    h4,
+    p {
+        color: $dark-blue;
+    }
+    p {
+        font-size: 17px;
+        font-weight: 500;
+    }
+    h3 {
+        font-size: 30px;
+        line-height: 10px;
+    }
+
+    .contact-us-form {
+        flex-basis: 40%;
+        @include mq("desktop") {
+            flex-basis: 100%;
+        }
+    }
+    .contact-us-card {
+        flex-basis: 60%;
+        @include mq("desktop") {
+            flex-basis: 100%;
+            transform: scale(0.6);
+        }
+        @include mq("tablet") {
+            transform: scale(0.9);
+        }
+    }
+    input {
+        margin: 5px 0px;
+    }
+}
+.contact-us-card {
+    /*  background: $color-white url("../../resources/images/mac-book.png") ;
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat; */
+    position: relative;
+    .macbook-img {
+        width: 100%;
+        @include mq("tablet") {
+            display: none;
+        }
+    }
+    .img-wrapper {
+        position: absolute;
+        top: -5%;
+        right: 20%;
+        img {
+            max-width: 163px;
+            width: 50%;
+        }
+        @include mq("tablet") {
+            display: none;
+        }
+    }
+    .contacts-wrapper {
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        display: flex;
+        /* justify-content: space-between; */
+        width: 100%;
+        align-items: center;
+        @include mq("tablet") {
+            position: unset;
+            flex-direction: column;
+        }
+    }
+    .card-item-wrapper {
+        width: 209px;
+        .card-item {
+            transform: scale(0.7);
+        }
+        @include mq("tablet") {
+            width: 300px;
+        }
+    }
+    .contact-user-details {
+        .phone-email {
+            background-color: $primary-color;
+            padding: 10px;
+            border-radius: 20px;
+            color: $white-color;
+            text-align: center;
+        }
+    }
+}

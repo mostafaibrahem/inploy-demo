@@ -1,0 +1,11 @@
+.main-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 119px;
+    box-shadow: 0 3px 3px 0px $light-gray;
+    img{
+        width: 115px;
+        height: 43px;
+    }
+}

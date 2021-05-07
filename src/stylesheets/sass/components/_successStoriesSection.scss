@@ -1,0 +1,23 @@
+.success-stories-section{
+    background-color: $light-gray-background;
+    h3{
+        padding-top: 150px;
+        text-align: center;
+        color: $primary-color;
+    }
+    .images-wrapper{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 20px 120px;
+        @include mq('tablet-wide'){
+            padding: 20px;
+        }
+        img{
+            margin: 10px;
+            transform: scale(0.8);
+            max-width: 80%;
+            
+        }
+}
+}

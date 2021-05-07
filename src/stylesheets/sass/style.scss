@@ -1,0 +1,28 @@
+@import './helpers/variables',
+        './helpers/mixins';
+
+@import './uiComponents/buttons',
+        './uiComponents/inputs',
+        './uiComponents/shapes'
+        ;
+
+@import './components/header',
+        './components/welcomeSection',
+        './components/serviceRegisterSection',
+        './components/registerForm',
+        './components/cardsSlider',
+        './components/buttonsSection',
+        './components/successStoriesSection',
+        './components/contactUsSection',
+        './components/footer'
+        ;
+
+        html{
+            width: 100vw;
+            overflow-x: hidden;
+        }
+        body{
+            width: 100%;
+            overflow-x: hidden;
+            
+        }

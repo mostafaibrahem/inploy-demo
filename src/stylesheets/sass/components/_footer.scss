@@ -1,0 +1,55 @@
+footer {
+    background-color: $light-gray-background;
+
+    .first-line {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 120px;
+        border-bottom: 1px solid $light-gray;
+        @include mq('tablet-small'){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo{
+            width: 115px;
+        }
+    }
+    .second-line {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 120px;
+        @include mq("tablet-qc") {
+            padding: 20px;
+        }
+        @include mq("ipad") {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+        }
+        li {
+            display: block;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+            color: #6a6975;
+            @include mq("phone-wide") {
+                font-size: 10px;
+            }
+        }
+        p {
+            color: #6a6975;
+            @include mq("phone-wide") {
+                font-size: 10px;
+            }
+        }
+    }
+}
